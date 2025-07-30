@@ -1,0 +1,22 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Simulation Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">Simulation Results</h1>
+      <h2 class="mt-4">Visualizations</h2>
+      <img src="data:image/png;base64,{{ plot_url }}" class="img-fluid">
+      <h2 class="mt-4">Aggregated Data</h2>
+      {% for table in tables %}
+        {{ table|safe }}
+      {% endfor %}
+      <a href="/" class="btn btn-secondary mt-4">Back to Home</a>
+    </div>
+  </body>
+</html>
